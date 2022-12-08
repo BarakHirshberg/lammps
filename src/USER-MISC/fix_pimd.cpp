@@ -562,7 +562,7 @@ void FixPIMD::spring_force()
         f[i][1] -= (dy) * ff;
         f[i][2] -= (dz) * ff;
 
-        spring_energy += (delx2*delx2+dely2*dely2+delz2*delz2);
+        spring_energy += -0.5*ff*(delx2*delx2+dely2*dely2+delz2*delz2);
     }
     xlast += 3;
     xnext += 3;
